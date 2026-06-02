@@ -617,6 +617,42 @@ footer {
   .download-section { padding: 80px 24px; }
   footer { padding: 32px 24px; flex-direction: column; text-align: center; }
 }
+
+.primary-download-btn {
+  background: linear-gradient(135deg, var(--gold) 0%, #b8791a 100%) !important;
+  border: none !important;
+  box-shadow: 0 12px 40px rgba(212,151,42,0.4) !important;
+  padding: 20px 42px !important;
+  border-radius: 20px !important;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  min-width: 280px !important;
+  justify-content: center !important;
+}
+
+.primary-download-btn:hover {
+  transform: translateY(-5px) scale(1.03) !important;
+  box-shadow: 0 20px 50px rgba(212,151,42,0.6) !important;
+  background: linear-gradient(135deg, #e5a432 0%, var(--gold) 100%) !important;
+}
+
+.pulse-animation {
+  animation: pulseIcon 2s infinite ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes pulseIcon {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+}
 </style>
 </head>
 <body>
@@ -651,10 +687,8 @@ footer {
     <div class="cta-group">
       <a href="#download" class="btn-primary">
         <span class="icon-graphic btn-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 4v12"/>
-            <path d="m7 11 5-5 5 5"/>
-            <path d="M5 17h14"/>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width: 24px; height: 24px;">
+            <path d="M12 2a1 1 0 0 1 1 1v9.586l2.293-2.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L11 12.586V3a1 1 0 0 1 1-1zm-9 16a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1z"/>
           </svg>
         </span>
         Télécharger l'App
@@ -975,41 +1009,14 @@ footer {
     <h2 style="color:var(--white)">Prêt à protéger<br>vos cultures ?</h2>
     <p>Téléchargez Wheat Rust gratuitement et rejoignez les agriculteurs algériens qui utilisent l'intelligence artificielle pour sécuriser leur récolte.</p>
     <div class="download-btns">
-      <a href="#" class="store-btn">
-        <span class="icon-graphic store-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M8.5 6.5h7v11h-7z"/>
-            <path d="M10.5 8.5h3v1h-3z"/>
-            <path d="M10.5 10.5h3v1h-3z"/>
-            <path d="M10.5 12.5h2v1h-2z"/>
+      <a href="https://expo.dev/artifacts/eas/7o2mc8q1AhB7QoDEZzs6jY.apk" class="store-btn primary-download-btn">
+        <span class="icon-graphic store-icon pulse-animation" style="color: var(--white);">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width: 32px; height: 32px;">
+            <path d="M12 2a1 1 0 0 1 1 1v9.586l2.293-2.293a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L11 12.586V3a1 1 0 0 1 1-1zm-9 16a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1z"/>
           </svg>
         </span>
         <div class="store-text">
-          <span class="store-sub">Télécharger sur</span>
-          <span class="store-name">App Store</span>
-        </div>
-      </a>
-      <a href="#" class="store-btn">
-        <span class="icon-graphic store-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M9 7l8 5-8 5z" fill="currentColor"/>
-          </svg>
-        </span>
-        <div class="store-text">
-          <span class="store-sub">Disponible sur</span>
-          <span class="store-name">Google Play</span>
-        </div>
-      </a>
-      <a href="#" class="store-btn">
-        <span class="icon-graphic store-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 4v12"/>
-            <path d="m7 11 5-5 5 5"/>
-            <path d="M5 17h14"/>
-          </svg>
-        </span>
-        <div class="store-text">
-          <span class="store-sub">Installer l'</span>
+          <span class="store-sub" style="color: rgba(255,255,255,0.75);">Installer l'</span>
           <span class="store-name">APK Direct</span>
         </div>
       </a>
